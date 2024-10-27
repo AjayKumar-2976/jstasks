@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1 style="text-align: center;">LOGIN FORM</h1>
+
+    <input type ="text" name="fname" placeholder="enter name" id="in1"><br>
+    <br>
+    <input type = "password" name="pwor" placeholder="enter password" id="in2">
+    <br><br>
+    <button onclick=SUBMIT()>SUBMIT</button>
+
+</center>
+
+<script>
+    
+    let width1 = screen.innerWidth //give the inner width
+    console.log(screen.innerWidth);
+
+    if(width1 >=320 && width1<=576 ){
+        console.log("THIS IS FOR SMALL SCREEN");
+        
+    }
+    else if(width1 >=576 && width1<=768){
+        console.log("THIS IS FOR medium SCREEN");
+        
+    }
+    
+    else if(width1 >=769 && width1 <=992){
+        console.log("this is for large scrrens");
+        
+    }
+
+    else{
+        console.log("THIS IS FOR VERY LARGE SCREEN");
+        
+    }
+
+    var inp1 = document.getElementById("in1")
+    console.log(inp1);
+
+    var inp2 = document.getElementById("in2")
+    console.log(inp2);
+
+    function SUBMIT(){
+     if(inp1.value === "AJAYKUMAR" && inp2.value=== "ajay0010"){
+        
+        alert("VALID DETAILS")
+        location.assign("./page2.html")
+
+     }
+      else{
+        alert("invalid details")
+        location.assign("./page3.html")
+
+      }
+    }
+    
+</script>
+</html>
