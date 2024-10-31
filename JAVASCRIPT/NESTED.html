@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    //NESTED FOR
+    let a=10;
+    for(i=1; i<=a; i++){
+        for(j=0;j<=10;j++){
+            console.log(i + "*"+ j + "=" + i*j);
+
+        }
+        
+    }
+
+    //NESTED LOOP
+    let weight = prompt("enter the weight of parcel")
+    let destination = prompt("enter the destination").toLocaleLowerCase()
+
+    if (weight <= 1) {
+
+        if (destination == "local") {
+            console.log(`${weight * 5}`);
+
+        }
+        else if (destination == "national") {
+            console.log(`${weight * 8}`);
+        }
+
+        else if (destination == "international") {
+            console.log(`${weight * 15}`);
+        }
+        else {
+            console.log("invalid");
+
+        }
+    }
+
+    else if (weight>1 && weight<=5) {
+
+        if (destination == "local") {
+            console.log(`${weight * 10}`);
+        }
+
+        else if (destination == "national") {
+            console.log(`${weight * 15}`);
+        }
+
+        else if (destination == "international") {
+            console.log(`${weight * 30}`);
+        }
+    }
+
+    else if (weight > 5 && weight <= 10) {
+
+        if (destination == "local") {
+            console.log(`${weight * 20}`);
+        }
+
+        else if (destination == "national") {
+            console.log(`${weight * 25}`);
+        }
+
+        else if (destination == "international") {
+            console.log(`${weight * 50}`);
+        }
+        
+    }
+    else if (weight > 10) {
+        console.log("INVALID");
+
+    }
+
+
+//NESTED 3:
+let str = "ajaykumar"
+for(i=0;i<str.length;i++){
+    if(i%2 == 0){
+        console.log(str[i].toLowerCase);
+        
+    }
+    else{
+        console.log(str[i].toUpperCase);
+        
+    }
+}
+    
+//NESTED 4: switch
+
+const productCatg = prompt("enter the category: ").toLowerCase()
+    const productType = prompt("enter the producttype: ").toLowerCase()
+    switch (productCatg) {
+        case "electronics":
+            switch (productType) {
+                case "mobile": console.log("5% Discount"); break;
+                case "laptop": console.log("10% Discount"); break;
+            }
+            break;
+
+        case "clothing":
+            switch (productType) {
+                case "men": console.log("15% Discount"); break;
+                case "women": console.log("20% Discount"); break;
+            }
+            break;
+
+
+        case "grocery":
+            switch (productType) {
+                case "fruits": console.log("5% Discount"); break;
+                case "vegetables": console.log("10% Discount"); break;
+
+            }
+            break;
+    }
+   
+
+</script>
+</html>
